@@ -49,8 +49,8 @@ INSERT INTO `students`(
     `date_of_birth`, 
     `fiscal_code`, 
     `enrolment_date`, 
-    `registration_number`, `
-    email`
+    `registration_number`, 
+    `email`
     )
 VALUES (
     18569, 
@@ -64,7 +64,12 @@ VALUES (
     "filajorsol@gmail.com"
     )
 
-
-
 -- 10. Change Professor Pietro Rizzo's office number to 126
+UPDATE `teachers` 
+SET `office_number` = 126
+WHERE `name` = "Pietro"
+AND `surname` = "Rizzo"
+
+
+
 
