@@ -2,7 +2,7 @@
 SELECT *
 FROM `students`
 WHERE `date_of_birth` >= "1990-01-01"
-and `date_of_birth` <= "1990-12-31"
+AND `date_of_birth` <= "1990-12-31"
 
 -- 2. Select all courses worth more than 10 credits
 SELECT * 
@@ -18,9 +18,15 @@ WHERE `date_of_birth` <= "1994-10-16"
 SELECT * 
 FROM `courses` 
 WHERE `period` = "I semestre"
-and `year` = 1
+AND `year` = 1
 
 -- 5. Select all exams that take place  (after 14:00) on 2020-06-20
-SELECT * FROM `exams`
+SELECT * 
+FROM `exams`
 WHERE `date` = "2020-06-20" 
 AND `hour` > "14:00:00";
+
+-- 6. Select all master's degree programs
+SELECT *
+FROM `degrees` 
+WHERE `level` = "magistrale"
