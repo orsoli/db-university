@@ -40,3 +40,31 @@ SELECT COUNT(*)
 FROM `teachers`
 WHERE `phone` is NULL
 
+-- 9. Insert a new record into the students' table with your own data (for the degree_id field, enter a random value)
+INSERT INTO `students`(
+    `id`,
+    `degree_id`, 
+    `name`, 
+    `surname`, 
+    `date_of_birth`, 
+    `fiscal_code`, 
+    `enrolment_date`, 
+    `registration_number`, `
+    email`
+    )
+VALUES (
+    18569, 
+    1, 
+    "Orsol", 
+    "Filaj", 
+    "1988-11-24", 
+    "ORSFLJ34B200Z100", 
+    "2008-10-10", 
+    234, 
+    "filajorsol@gmail.com"
+    )
+
+
+
+-- 10. Change Professor Pietro Rizzo's office number to 126
+
