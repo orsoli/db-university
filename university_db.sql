@@ -19,3 +19,8 @@ SELECT *
 FROM `courses` 
 WHERE `period` = "I semestre"
 and `year` = 1
+
+-- 5. Select all exams that take place  (after 14:00) on 2020-06-20
+SELECT * FROM `exams`
+WHERE `date` = "2020-06-20" 
+AND `hour` > "14:00:00";
