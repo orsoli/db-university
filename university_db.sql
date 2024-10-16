@@ -30,3 +30,7 @@ AND `hour` > "14:00:00";
 SELECT *
 FROM `degrees` 
 WHERE `level` = "magistrale"
+
+-- 7. How many departments make up university
+SELECT COUNT(*)
+FROM `departments`
