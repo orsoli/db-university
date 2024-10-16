@@ -8,3 +8,8 @@ and `date_of_birth` <= "1990-12-31"
 SELECT * 
 FROM `courses` 
 WHERE `cfu` > 10
+
+-- 3. Select all students over than 30 years old
+SELECT *
+FROM `students`
+WHERE `date_of_birth` > "1994-10-16"
