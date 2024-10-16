@@ -70,6 +70,6 @@ SET `office_number` = 126
 WHERE `name` = "Pietro"
 AND `surname` = "Rizzo"
 
-
-
-
+-- 11. Delete the student record created in point 9 from the students' table
+DELETE FROM `students`
+WHERE `id` = 18569
