@@ -34,3 +34,9 @@ WHERE `level` = "magistrale"
 -- 7. How many departments make up university
 SELECT COUNT(*)
 FROM `departments`
+
+-- 8. How many teachers do not have phone nr
+SELECT COUNT(*)
+FROM `teachers`
+WHERE `phone` is NULL
+
