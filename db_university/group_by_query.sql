@@ -9,8 +9,10 @@ FROM `teachers`
 GROUP BY `office_address` ORDER BY `office_address` ASC;
 
 -- Calculate the average grades for each exam session
-
-
+SELECT `exam_id` as `exam`, AVG(`vote`) as `avg_vote` 
+FROM `exam_student`
+GROUP BY `exam_id`
+ORDER BY `exam_id` ASC
 
 -- Count how many degree programs there are for each department
 SELECT `department_id` as `id_depart`, COUNT(`department_id`) as `degree_program` 
