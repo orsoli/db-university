@@ -19,3 +19,11 @@ JOIN `course_teacher` ON `teachers`.`id` = `course_teacher`.`teacher_id`
 JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id`
 WHERE `teachers`.`id` = 44
 
+-- Select all students with data on the degree program they are enrolled in and the corresponding department, ordered alphabetically by last name and first name
+SELECT `students`.`surname` as `Last Name`, `students`.`name` as `First Name`, `degrees`.`name` as `Course`, `departments`.`name` as `Department`
+FROM `students` 
+LEFT JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+LEFT JOIN `departments`
+ON `degrees`.`department_id` = `departments`.`id`
+ORDER BY `students`.`surname` ASC;
