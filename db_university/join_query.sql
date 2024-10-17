@@ -12,3 +12,10 @@ JOIN `degrees`
 ON `departments`.`id` = `degrees`.`department_id`
 WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
 
+-- Select all courses taught by Fulvio Amato (id=44)
+SELECT `teachers`.`id` as `id`, `teachers`.`name` as `FirstName`, `teachers`.`surname` as `LastName`, `courses`.`name` as `Course`
+FROM `teachers`
+JOIN `course_teacher` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id`
+WHERE `teachers`.`id` = 44
+
