@@ -7,3 +7,13 @@ GROUP BY  YEAR(`enrolment_date`) ORDER BY YEAR ASC
 SELECT `office_address` as `office_building`, COUNT(`office_address`) as `teacher_nr`
 FROM `teachers`
 GROUP BY `office_address` ORDER BY `office_address` ASC;
+
+-- Calculate the average grades for each exam session
+
+
+
+-- Count how many degree programs there are for each department
+SELECT `department_id` as `id_depart`, COUNT(`department_id`) as `degree_program` 
+FROM `degrees`
+GROUP BY `department_id`
+ORDER BY `department_id` ASC
