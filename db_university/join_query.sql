@@ -5,3 +5,10 @@ JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
 WHERE `degrees`.`name` = "Corso di Laurea in Economia"
 ORDER BY `students`.`name` ASC
 
+-- Select all 'Corsi di Laurea Magistrale' in Neuroscienze department.
+SELECT `degrees`.`name` as `all_course`, `departments`.`name` as `department` 
+FROM `departments`
+JOIN `degrees` 
+ON `departments`.`id` = `degrees`.`department_id`
+WHERE `departments`.`name` = 'Dipartimento di Neuroscienze'
+
