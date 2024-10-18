@@ -36,9 +36,9 @@ SELECT `students`.`surname` as `Last Name`,
         `degrees`.`name` as `Course`, 
         `departments`.`name` as `Department`
 FROM `students` 
-LEFT JOIN `degrees`
+JOIN `degrees`
 ON `students`.`degree_id` = `degrees`.`id`
-LEFT JOIN `departments`
+JOIN `departments`
 ON `degrees`.`department_id` = `departments`.`id`
 ORDER BY `students`.`surname` ASC;
 
@@ -49,10 +49,19 @@ SELECT `teachers`.`id` as `id`, `teachers`.
        `degrees`.`name` as `Degree`, 
        `courses`.`name` as `Course`
 FROM `courses`
-LEFT JOIN `course_teacher` 
+JOIN `course_teacher` 
 ON `courses`.`id` = `course_teacher`.`course_id`
-LEFT JOIN `teachers`
+JOIN `teachers`
 ON `teachers`.`id` = `course_teacher`.`teacher_id`
-LEFT JOIN `degrees`
+JOIN `degrees`
 ON `degrees`.`id` = `courses`.`degree_id`
 ORDER BY `teachers`.`name` ASC;
+
+-- Select all teachers who teach in the Mathematics Department (54)
+SELECT DISTINCT `teachers`.`name`, `teachers`.`surname`
+FROM `departments`
+JOIN `degrees` ON `departments`.`id` = `degrees`.`department_id`
+JOIN `courses` ON `degrees`.`id` = `courses`.`degree_id`
+JOIN `course_teacher` ON `courses`.`id` = `course_teacher`.`course_id`
+JOIN `teachers` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+WHERE `departments`.`name` = 'Dipartimento di Matematica'
